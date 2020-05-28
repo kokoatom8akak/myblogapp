@@ -129,5 +129,5 @@ MEDIA_ROOT = BASE_DIR
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
-if not DEGUG:
+if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
