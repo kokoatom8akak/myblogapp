@@ -20,8 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'f)ca)49)*4gsgf))=k_x2@4#8k09)m=_5)3c#187@cnbdj#%&k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -130,3 +128,6 @@ MEDIA_ROOT = BASE_DIR
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+if not DEGUG:
+    SECRET_KEY = os.environ['SECRET_KEY']
