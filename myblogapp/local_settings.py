@@ -13,4 +13,4 @@ DATABASES = {
     }
 }
 
-DEBUG = UserAttributeSimilarityValidator
+DEBUG = True
