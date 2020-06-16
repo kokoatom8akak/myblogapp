@@ -26,6 +26,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+SECRET_KEY = 'f)ca)49)*4gsgf))=k_x2@4#8k09)m=_5)3c#187@cnbdj#%&k'
+
 
 # Application definition
 
@@ -129,5 +131,5 @@ MEDIA_ROOT = BASE_DIR
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
-if not DEBUG:
-    SECRET_KEY = os.environ['SECRET_KEY']
+#if not DEBUG:
+    #SECRET_KEY = os.environ['SECRET_KEY']
