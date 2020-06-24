@@ -21,7 +21,8 @@ from posts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('posts/', include('posts.urls')),
+    path('', include('posts.urls')),
+    #path('posts/', include('posts.urls')),
     path('posts/<int:post_id>/', views.post_detail, name="post_detail"),
     path('posts/about/', include('posts.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
